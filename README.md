@@ -6,12 +6,9 @@ Prompt Claude directly from your Firefox address bar using **`@claude`**, just l
 
 ## Installation
 
-1. Open Firefox → navigate to `about:debugging#/runtime/this-firefox`
-2. Click **"Load Temporary Add-on..."**
-3. Select `manifest.json` from the unzipped folder
-
-> **Permanent install:** Use Firefox Developer Edition or Nightly with
-> `xpinstall.signatures.required` set to `false` in `about:config`.
+1. Open Firefox → navigate to `about:addons
+2. Click the cogwheel, then click **"Install Add-on from File..."**
+3. Select the `claude-search` .xpi file from the releases page
 
 ---
 
