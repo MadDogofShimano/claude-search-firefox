@@ -68,34 +68,3 @@ Prompts are **automatically submitted** by default. To review before sending, ad
 2. When you submit, Firefox navigates to `claude.ai/new?q=your+prompt+here`
 3. A content script on `claude.ai` reads the `?q=` parameter, parses any flags, cleans the URL, and injects the prompt into the chat editor
 4. If `-send` was used, it clicks the send button automatically
-
----
-
-## Troubleshooting
-
-| Issue | Fix |
-|-------|-----|
-| `@claude` not appearing | After loading the extension, type `@claude` then Tab. Firefox may need a restart. |
-| Prompt not injected | claude.ai may have updated their editor DOM. Open an issue. |
-| Model not switching | Best-effort — depends on claude.ai's UI structure. Change manually if needed. |
-
----
-
-## Files
-
-```
-claude-search/
-├── manifest.json      # Extension manifest + search engine registration
-├── content.js         # Prompt injector (runs on claude.ai)
-├── icons/
-│   ├── claude-16.png
-│   ├── claude-32.png
-│   ├── claude-48.png
-│   ├── claude-64.png
-│   └── claude-128.png
-└── README.md
-```
-
-## License
-
-MIT
