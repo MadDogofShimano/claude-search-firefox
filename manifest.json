@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "Claude Search",
+  "version": "1.3.0",
+  "description": "Use @claude in the address bar to prompt Claude directly. Supports -sonnet, -haiku flags.",
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "name": "Claude",
+      "keyword": "@claude",
+      "search_url": "https://claude.ai/new?ext_prompt={searchTerms}",
+      "favicon_url": "icons/claude-16.png",
+      "encoding": "UTF-8",
+      "is_default": false
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://claude.ai/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ],
+  "icons": {
+    "16": "icons/claude-16.png",
+    "32": "icons/claude-32.png",
+    "48": "icons/claude-48.png",
+    "64": "icons/claude-64.png",
+    "128": "icons/claude-128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "claude-search@extension",
+      "strict_min_version": "63.0"
+    }
+  }
+}
