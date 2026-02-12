@@ -1,4 +1,4 @@
-# Claude Search — Firefox Extension
+# Claude Search — Firefox Extension 🦊
 
 Prompt Claude directly from your Firefox address bar using **`@claude`**, just like `@youtube` or `@google`.
 
